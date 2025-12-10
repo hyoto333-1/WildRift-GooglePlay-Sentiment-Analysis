@@ -42,12 +42,12 @@ nltk.download('punkt_tab')
 # Mengimpor pustaka google_play_scraper untuk mengakses ulasan dan informasi aplikasi dari Google Play Store.
 from google_play_scraper import app, reviews_all, Sort
 
-# Mengambil semua ulasan dari aplikasi dengan ID 'com.byu.id' di Google Play Store.
+# Mengambil semua ulasan dari aplikasi dengan ID di Google Play Store.
 # Proses scraping mungkin memerlukan beberapa saat tergantung pada jumlah ulasan yang ada.
 scrapreview = reviews_all(
     'com.riotgames.league.wildrift',          # ID aplikasi
-    lang='id',             # Bahasa ulasan (default: 'en')
-    country='id',          # Negara (default: 'us')
+    lang='id',             # Bahasa ulasan 
+    country='id',          # Negara 
     sort=Sort.MOST_RELEVANT, # Urutan ulasan (default: Sort.MOST_RELEVANT)
     count=1000             # Jumlah maksimum ulasan yang ingin diambil
 )
